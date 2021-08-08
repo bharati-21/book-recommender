@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
-import { books } from "./Books.js";
+import { books } from "./Books";
+import { Header } from "./Header";
 
 export default function App() {
   const [bookGenre, setBookGenre] = useState("fiction");
@@ -11,6 +12,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <Header></Header>
       <div className="container">
         <header className="hero">
           <h1 className="hero-head">
