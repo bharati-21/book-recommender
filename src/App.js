@@ -73,7 +73,10 @@ export default function App() {
                 return (
                   <div className={(bookGenre, "book")} key={index}>
                     <div className={bookGenre}>
-                      <img src={book.image} />
+
+                      <div className="img-container">
+                        <img src={book.image} />
+                      </div>
                       <div className="book-details" id={bookGenre}>
                         <p className="book-name">{book.name}</p>
                         <p className="book-author italic">{book.author}</p>
@@ -89,4 +92,5 @@ export default function App() {
       </div>
     </div>
   );
+
 }

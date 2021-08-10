@@ -128,10 +128,64 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  margin: 1rem auto 3rem auto;
 }
 
 .main .genre-links .btn-genre {
   width: 150px;
+
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .genre-links .btn-genre:hover {
+  opacity: 0.9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+}
+
+.btn-red {
+  background: var(--red-color);
+  color: #fff;
+}
+
+.btn-blue {
+  background: var(--blue-color);
+  color: #fff;
+}
+
+.btn-yellow {
+  background: var(--yellow-color);
+  color: #000;
+}
+
+.btn-violet {
+  background: var(--violet-color);
+  color: #fff;
+}
+
+.btn-green {
+  background: var(--green-color);
+  color: #fff;
+}
+
+.btn-pink {
+  background: var(--pink-color);
+  color: #fff;
+}
+
+.book-list {
+  width: 100%;
+  margin: auto;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem auto;
+  justify-items: center;
   font-weight: bold;
 }
 
@@ -185,11 +239,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   align-content: center; */
 }
 
 .books .book {
-  margin: 1rem;
+  margin: 1.5rem 1rem;
   flex: 1;
 }
 
@@ -198,15 +254,31 @@ body {
   width: 15vw;
   height: auto;
   display: inline-block;
+  flex: 1;
 }
 
+.books .book .img-container {
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
 .books .book .book-details {
   padding: 1rem;
   font-family: "Lato", sans-serif;
 }
 
+.books .book .img-container:hover {
+  transform: scale(1.1);
+}
 .fiction p.book-name {
   color: var(--red-color);
+}
+
+.books .book img {
+  text-align: center;
+  width: 20vw;
+  /* width: 100%; */
+  height: auto;
+  display: inline-block;
 }
 
 .thriller p.book-name {
@@ -217,26 +289,48 @@ body {
   color: var(--yellow-color);
 }
 
+.books .book .book-details {
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
 .romance p.book-name {
   color: var(--green-color);
+  font-family: "Lato", sans-serif;
+}
+
+.fiction p.book-name {
+  color: var(--red-color);
 }
 
 .biography p.book-name {
   color: var(--violet-color);
 }
 
+.thriller p.book-name {
+  color: var(--blue-color);
+}
 .selfHelp p.book-name {
   color: var(--pink-color);
 }
 
+.fantasy p.book-name {
+  color: var(--yellow-color);
+}
 .books .book .book-details p.book-name {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
+.romance p.book-name {
+  color: var(--green-color);
+}
 .books .book .book-details p.book-author {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+
+.biography p.book-name {
+  color: var(--violet-color);
 }
 
 @media screen and (max-width: 800px) {
@@ -244,9 +338,17 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
+  .selfHelp p.book-name {
+    color: var(--pink-color);
+  }
   .books .book img {
     width: 30vw;
   }
+}
+
+.books .book .book-details p.book-name {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -254,8 +356,45 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .books .book .book-details p.book-author {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
   .books .book img {
     width: 50vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .books {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 400px) {
+    .navbar-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .books .book img {
+      width: 30vw;
+    }
+    .navbar-container .logo a {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .books {
+      grid-template-columns: 1fr;
+    }
+
+    .navbar-container ul li {
+      margin-top: 1rem;
+    }
+  }
+
+  .books .book img {
+    width: 60vw;
   }
 }
 
@@ -267,9 +406,5 @@ body {
 
   .navbar-container .logo a {
     margin-bottom: 1.5rem;
-  }
-
-  .navbar-container ul li {
-    margin-top: 1rem;
   }
 }
