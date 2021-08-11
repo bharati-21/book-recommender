@@ -180,26 +180,28 @@ body {
 }
 
 .books {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 1rem auto;
   justify-items: center;
   align-items: center;
   align-content: center;
   justify-items: center;
-  place-items: center;
+  place-items: center; */
 
-  /* display: flex;
+  display: flex;
   flex-direction: row;
+  margin: 1rem auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-content: center; */
+  align-content: center;
 }
 
 .books .book {
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 2rem;
   width: 100%;
+  flex: 1;
 }
 
 .books .book .img-container {
