@@ -73,7 +73,6 @@ export default function App() {
                 return (
                   <div className={(bookGenre, "book")} key={index}>
                     <div className={bookGenre}>
-
                       <div className="img-container">
                         <img src={book.image} />
                       </div>
@@ -92,5 +91,4 @@ export default function App() {
       </div>
     </div>
   );
-
 }
