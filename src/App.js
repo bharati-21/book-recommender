@@ -79,6 +79,7 @@ export default function App() {
                       <div className="book-details" id={bookGenre}>
                         <p className="book-name">{book.name}</p>
                         <p className="book-author italic">{book.author}</p>
+                        <p className="book-description">{book.description}</p>
                         <p className="book-rating">{book.rating}</p>
                       </div>
                     </div>
