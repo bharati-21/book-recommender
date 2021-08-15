@@ -180,27 +180,28 @@ body {
 }
 
 .books {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 1rem auto;
   justify-items: center;
   align-items: center;
   align-content: center;
   justify-items: center;
-  place-items: center; */
+  place-items: center;
 
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   margin: 1rem auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  align-content: center; */
 }
 
 .books .book {
   margin: 1.5rem 2rem;
   width: 100%;
+  height: auto;
   flex: 1;
 }
 
@@ -221,32 +222,93 @@ body {
   height: 60vh;
 }
 
+.books .book-description {
+  max-width: 40vh;
+  margin: auto;
+  text-align: justify;
+}
+
+.books .book-rating {
+  margin: 1rem auto;
+  font-weight: bold;
+}
+
 .books .book .book-details {
   /* margin: 2rem 1rem 1rem 1rem; */
   font-family: "Lato", sans-serif;
 }
 
-.fiction p.book-name {
-  color: var(--red-color);
+.fiction p.book-author {
+  background: var(--red-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
 }
 
-.thriller p.book-name {
-  color: var(--blue-color);
+.thriller p.book-author {
+  background: var(--blue-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
 }
 
-.fantasy p.book-name {
+.fantasy p.book-author {
   color: var(--yellow-color);
 }
 
-.romance p.book-name {
+.romance p.book-author {
+  background: var(--green-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.biography p.book-author {
+  background: var(--violet-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.selfHelp p.book-author {
+  background: var(--pink-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.fiction p.book-name,
+.fiction p.book-rating {
+  color: var(--red-color);
+}
+
+.thriller p.book-name,
+.thriller p.book-rating {
+  color: var(--blue-color);
+}
+
+.fantasy p.book-name,
+.fantasy p.book-rating {
+  color: var(--yellow-color);
+}
+
+.romance p.book-name,
+.romance p.book-rating {
   color: var(--green-color);
 }
 
-.biography p.book-name {
+.biography p.book-name,
+.biography p.book-rating {
   color: var(--violet-color);
 }
 
-.selfHelp p.book-name {
+.selfHelp p.book-name,
+.selfHelp p.book-rating {
   color: var(--pink-color);
 }
 
