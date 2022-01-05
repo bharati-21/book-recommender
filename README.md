@@ -1,4 +1,4 @@
-# EMOJI INTERPRETER
+# BOOK RECOMMENDER
 An emoji interpreter that tells the name of the emoji when user clicks the emoji, or when user inputs the emoji in the input box using known emojis from the database.
 
 ### This application recommends my favorite reads across a few genres.
